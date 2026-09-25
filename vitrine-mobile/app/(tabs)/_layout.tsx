@@ -3,11 +3,9 @@ import { Ionicons } from "@expo/vector-icons";
 import { useColorScheme } from "nativewind";
 import { BotaoTema } from "@/components/BotaoTema";
 import { CORES_NAVEGACAO } from "@/constants/tema";
-
 export default function LayoutAbas() {
   const { colorScheme } = useColorScheme();
   const cores = CORES_NAVEGACAO[colorScheme === "dark" ? "dark" : "light"];
-
   return (
     <Tabs
       screenOptions={{
@@ -20,6 +18,8 @@ export default function LayoutAbas() {
         headerStyle: { backgroundColor: cores.fundo },
         headerTintColor: cores.texto,
         headerRight: () => <BotaoTema />,
+        // NOVO: fundo das telas das abas, nos dois temas
+        sceneStyle: { backgroundColor: cores.fundo },
       }}
     >
       <Tabs.Screen
