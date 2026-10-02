@@ -14,6 +14,10 @@ export default function FavoritosScreen() {
       <Link href="/" className="text-sky-700 dark:text-destaque mt-6">
         Ir para o catálogo
       </Link>
+      {/* TEMPORÁRIO: atalho para testar o login; sai no último passo */}
+      <Link href="/login" className="text-sky-700 dark:text-destaque mt-4">
+        Entrar (atalho temporário)
+      </Link>
     </View>
   );
 }
